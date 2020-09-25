@@ -1,0 +1,6 @@
+{ "open": { "database":"student", "login":"init", "password":"qwerty" }}
+{ "leader": { "timestamp": 1560168388, "password": "password1", "member": 1001 } }
+{ "leader": { "timestamp": 1560168405, "password": "password2", "member": 1002 } }
+{ "leader": { "timestamp": 1560168558, "password": "password3", "member": 1003 } }
+{ "leader": { "timestamp": 1560168631, "password": "password4", "member": 1004 } }
+{ "leader": { "timestamp": 1560168721, "password": "password5", "member": 1005 } }
