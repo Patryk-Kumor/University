@@ -1,0 +1,29 @@
+br
+h3 Witaj #{@current_name},
+
+h3 oto dotychczasowe Twoje rezerwacje:
+br
+table.table
+  thead
+    tr
+      th Produkt
+      th Data wypożyczenia
+      th Data oddania
+      th Oddano
+      th
+
+
+  tbody
+    - @bookings.each do |booking|
+      tr
+        td = booking.product_name
+        td = booking.start_date
+        td = booking.end_date
+        -if booking.returned
+            td = 'Tak'
+        -else
+            td = 'Nie'
+        -if Time.now > booking.end_date && !booking.returned
+            td = 'TERMIN'
+        -else
+            td = ''

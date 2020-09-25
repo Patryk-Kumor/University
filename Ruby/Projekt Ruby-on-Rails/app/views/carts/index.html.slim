@@ -1,0 +1,18 @@
+h1 Koszyk
+table.table
+  thead
+    tr 
+      th Nazwa
+      th Cena
+  tbody
+      - @cart.order_items.each do |item|
+        tr
+          td= item.product.name
+          td= item.product.price
+
+
+
+= button_to 'Rezerwacja produktów z koszyka', finalize_cart_path(@cart), data: { confirm: "Jesteś pewny? Będzie Cię to kosztowało #{number_to_currency(@value,locale: :pl)<<' PLN'}" }
+
+
+

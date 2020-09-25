@@ -1,0 +1,19 @@
+br
+h1 Users
+bre
+
+table.table
+  thead
+    tr
+      th Email
+      th Created_at
+      th
+
+  tbody
+    -@users.each do |user|
+      tr
+        td = link_to user.email, user_path(user.id)
+        td = user.created_at
+        td = link_to "Destroy", admin_destroy_user_path(user), method: :delete, data: { confirm: "You sure?" }
+
+

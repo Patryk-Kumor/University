@@ -1,0 +1,10 @@
+﻿Jan Kowalski;123456789;rodzina,przyjaciele
+Janusz Nosacz;987654321;sąsiad,przyjaciele
+Jarek;999666999;rodzina,przyjaciele,współpracownicy
+Jaro;911;policja,przyjaciele
+Marek;999;przyjaciele
+Grażyna;123412345;przyjaciele,rodzina
+Piotr;154125415;rodzina
+Smok;333;smoki,gady
+Bestia;666;demony,szatany
+Tadeusz;162349903;rodzina

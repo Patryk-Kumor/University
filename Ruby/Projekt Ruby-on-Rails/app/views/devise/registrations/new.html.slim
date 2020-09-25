@@ -1,0 +1,42 @@
+h2
+  | Sign up
+= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  = devise_error_messages!
+  .field.form-group
+    = f.label :email
+    br
+    = f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control'
+    .invalid-feedback
+  .field.form-group
+    = f.label :password
+    - if @minimum_password_length
+      em
+        | (
+        = @minimum_password_length
+        |  characters minimum)
+    br
+    = f.password_field :password, autocomplete: "new-password", class: 'form-control'
+  .field.form-group
+    = f.label :password_confirmation
+    br
+    = f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control'
+  .actions
+    = f.submit "Sign up", class: 'btn btn-primary'
+= render "devise/shared/links"
+
+javascript:
+  $('input[name="user[email]"]').blur(function() {
+    $('input[name="user[email]"]').removeClass('is-invalid')
+     $.get('/api/users/email_exists', {email: $(this).val()}, function(response) {
+        if(response === true) {
+          $('input[name="user[email]"]').addClass('is-invalid')
+          $('.invalid-feedback').text("Ten e-mail jest już zajęty");
+        }
+    })
+     $.get('/api/users/email_correct', {email: $(this).val()}, function(response) {
+        if(response === false) {
+          $('input[name="user[email]"]').addClass('is-invalid')
+          $('.invalid-feedback').text("Niepoprawny email");
+        }
+    })
+  })

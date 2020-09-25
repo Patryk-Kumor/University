@@ -1,0 +1,68 @@
+br
+
+- if @products.any?
+  h4 Polecamy nasz najnowszy produkt:
+  .row
+    .col
+      p
+        a href=product_path(@view_model.featured_product) = @view_model.featured_product.name
+br
+
+- if @products.any?
+  h4 Nowe produkty:
+  .row
+    - @view_model.new_products.each do |product|
+      .col
+        p
+          a href=product_path(product) = product.name
+br
+
+- if @products.any?
+  h4 Popularne produkty: 
+  .row
+    - @view_model.popular_products.each do |product|
+      .col
+        p
+          a href=product_path(product) = product.name
+br
+
+h1 Produkty:
+
+br
+h6 Wszystkie kategorie (chwilowo nie działa z wyszukiwaniem):
+p= cat
+
+br
+table.table
+  thead
+    tr 
+      th Nazwa
+      th Cena
+      th Opis
+      th Kategoria
+      th Ilość dostępnych sztuk
+      th
+      - if admin_user_signed_in?
+        th
+      - if admin_user_signed_in?
+        th
+
+  tbody
+    - @products.each do |product|
+      tr
+        td = product.name
+        td = number_to_currency(product.price,locale: :pl)<<' PLN'
+        td = product.description
+        td = product.category
+        td = product.amount
+        td = link_to 'Show', product
+        - if admin_user_signed_in?
+          td = link_to 'Edit', edit_product_path(product)
+        - if admin_user_signed_in?
+          td = link_to 'Destroy', product, data: { confirm: 'Are you sure?' }, method: :delete
+= paginate @products
+
+
+br
+  - if admin_user_signed_in?
+    = link_to 'New Product', new_product_path

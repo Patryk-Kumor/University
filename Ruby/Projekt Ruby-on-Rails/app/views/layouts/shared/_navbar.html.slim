@@ -1,0 +1,35 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  a.navbar-brand href="/" OurApp
+  button.navbar-toggler aria-controls="navbarNav" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarNav" data-toggle="collapse" type="button"
+    span.navbar-toggler-icon
+  #navbarNav.collapse.navbar-collapse
+    ul.navbar-nav
+      /li.nav-item class=(current_page?(posts_path) ? 'active' : '')
+        a.nav-link href=posts_path
+          | Posts
+      /li.nav-item class=(current_page?(user_root_path) ? 'active' : '')
+        a.nav-link href=user_root_path
+          | User panel
+      li.nav-item
+        a.nav-link href=carts_path 
+          = "Cart (#{current_guest.cart.order_items.size})"
+      li.nav-item
+        a.nav-link href=new_user_registration_path  Sign up
+      li.nav-item
+        a.nav-link href=user_session_path  Sign in
+      li.nav-item
+        - if user_signed_in?
+          a.nav-link href="/bookings/user_bookings"  Rezerwacje
+      li.nav-item
+        - if user_signed_in?
+          a.nav-link.disabled data-method='delete' href=destroy_user_session_path Logout
+
+    form.form-inline.my-2.my-lg-0.search-form action=products_path
+      input.main-search.form-control.mr-sm-2 type="search" placeholder="Search" aria-label="Search" name='key'
+      button class="btn btn-outline-white my-2 my-sm-0" type="submit"
+        | Search
+      .search-results
+        ul
+
+==render_breadcrumbs
+

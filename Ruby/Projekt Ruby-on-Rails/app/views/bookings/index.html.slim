@@ -1,0 +1,32 @@
+br
+h1 Rezerwacje:
+br
+table.table
+  thead
+    tr
+      th Klient
+      th Produkt
+      th Data wypożyczenia
+      th Data oddania
+      th Oddano
+      th
+      th
+      th
+
+  tbody
+    - @bookings.where(returned: [false, nil]).each do |booking|
+      tr
+        td = booking.user_name
+        td = booking.product_name
+        td = booking.start_date
+        td = booking.end_date
+        -if booking.returned
+            td = 'Tak'
+        -else
+            td = 'Nie'
+        -if Time.now > booking.end_date && !booking.returned
+            td = 'TERMIN'
+        -else
+            td = ''
+        td = link_to "Zwrócono", restore_booking_path(booking)
+        td = link_to 'Destroy', booking, data: { confirm: 'Are you sure?' }, method: :delete

@@ -1,0 +1,66 @@
+p#notice 
+p
+  strong Nazwa:
+  br
+  = @product.name
+  br
+  - if @product.picture.attached?
+     = image_tag @product.picture.variant(resize: "1000x200")
+p
+  strong Cena:
+  br
+  = number_to_currency(@product.price,locale: :pl)<<' PLN'
+p
+  strong Opis:
+  br
+  = @product.description
+p
+  strong Kategoria:
+  br
+  = @product.category
+p
+  strong Ilość dostępnych sztuk:
+  br
+  = @product.amount
+
+br
+=> link_to 'Edit', edit_product_path(@product)
+'|
+=< link_to 'Back', products_path
+
+= form_for @bookings do |f|
+  = f.hidden_field :product_id
+  p= f.submit
+
+
+= link_to 'Dodaj do koszyka', add_to_cart_product_path(@product) 
+
+hr
+br
+p
+  - if admin_user_signed_in?
+    p 
+      strong
+        a ZALOGOWANO JAKO ADMIN
+  strong Komentarze i opinie o produkcie:
+ul
+  - @product.comments.each do |comment|
+    li
+      = comment.content
+      = " (#{comment.created_at})  "
+      - if comment.user.present?
+         =  link_to "(#{comment.user.display_name}) ",  user_path(comment.user.id)
+      = link_to "Report", report_comment_path(comment)
+      - if admin_user_signed_in?
+        = link_to "Delete",[comment], method: :delete, data: {confirm: "Are you sure?"}, class: 'label alert'
+
+
+= form_for @comments do |f|
+  = f.hidden_field :product_id
+  p= f.text_area :content, rows: 7, cols: 70
+  p= f.submit
+
+= form_for @bookings do |f|
+  = f.hidden_field :product_id
+  p= f.submit
+

@@ -1,0 +1,28 @@
+style
+  | th:first-child { width: 70%; }
+  | tr {font-size: 17px;}
+
+br
+h1 Reported comments
+br
+
+table.table-bordered			
+  thead
+    tr 
+      th Content
+      th Author
+      th
+      th 
+      th
+
+  tbody
+    - @reported_comments.each do |comment|
+      tr
+        td = comment.content
+        - if comment.user.present?
+          td =  comment.user.display_name
+        - else
+          td
+        td = link_to "Ok", undo_report_comment_path(comment)
+        td = link_to "Show", comment.product
+        td = link_to "Delete",[comment], method: :delete, data: {confirm: "Are you sure?"}, class: 'label alert'

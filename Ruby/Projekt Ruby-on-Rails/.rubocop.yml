@@ -1,0 +1,30 @@
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'bin/*'
+    - 'vendor/bundle/**/*'
+  TargetRubyVersion: 2.5
+
+LineLength:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false	  
+
+Style/AsciiComments:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: true
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'  
+    - 'config/routes.rb'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/*.rb'

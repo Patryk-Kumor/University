@@ -1,0 +1,20 @@
+br
+h1 = @user.email
+
+
+
+h3 User comments
+ul
+  - @comments.each_key do |prod|
+      -if not prod.nil?
+        li
+          = link_to "#{prod.name}", product_path(prod.id)
+          br 
+          - @comments[prod].each do |comment|
+            = "Comment:   #{comment.content} "
+            br
+            = "           #{comment.created_at} "
+            br
+      
+
+

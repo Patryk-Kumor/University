@@ -1,0 +1,11 @@
+table.table
+  thead
+    tr
+      th Numer zamówienia
+      th Ilość produktów
+      th 
+  tbody    
+    - @orders.each do |order|
+      tr
+        td= link_to "Zamówienie numer ##{order.id}", user_panel_order_path(order)
+td= order.order_items.size
