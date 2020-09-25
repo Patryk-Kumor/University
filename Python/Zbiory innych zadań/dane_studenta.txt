@@ -1,0 +1,11 @@
+jasio matematyka 3 4 4 3 2
+ma³gosia j.polski 5 5 5
+jasio matematyka 6
+babajaga biologia 4
+jasio j.polski 1 2 3
+jasio programowanie 1 2 3 4 5
+ma³gosia matematyka 2 2
+stefan wf 1
+allah przysposobienie.obronne 6
+mahomed przysposobienie.obronne 6
+mahomed religia 6

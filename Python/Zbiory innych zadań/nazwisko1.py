@@ -1,0 +1,73 @@
+import random
+
+
+txt=open('slowa.txt', encoding='utf8').read().split()
+txt=set(txt)
+
+def słownik(txt):
+  dic={}
+  for słowo in txt:
+    dic[słowo]=len(słowo)
+  return dic
+
+def para(imię_nazwisko):
+    L=[]
+    zbiór=set(imię_nazwisko)
+    for wyraz in txt:
+      if set(wyraz).issubset(zbiór) and len(wyraz)<len(imię_nazwisko):
+        L.append(wyraz)
+    return(L)
+  
+def licznik(x):   #Zamiana na słownik (klucz litera: wartość ilość)
+  słowo=str(x)  
+  S={}
+  for element in słowo:
+    if element in S:
+      S[element]=S[element]+1
+    else:
+      S[element]=1
+  return S
+
+def sprawdź(coś_do_sprawdzenia,słowo):
+  X=licznik(coś_do_sprawdzenia)
+  Y=licznik(słowo)
+  if len(coś_do_sprawdzenia)<=len(słowo): 
+    for słowo in X:
+      for litera in coś_do_sprawdzenia:
+        if str(litera) in Y:
+          if X[litera] > Y[litera]:
+             return False
+        else:
+          return False
+    return True
+  else:
+    return False
+  
+def pary(imię_nazwisko):
+  X=imię_nazwisko
+  Y=set()
+  L=para(imię_nazwisko)
+  for słowo in L:
+    for drugie_słowo in L:
+      if len(słowo+drugie_słowo)==len(X):
+        if słowo==drugie_słowo:
+          pass
+        else:
+          if sprawdź(X,(słowo+drugie_słowo)) is True:
+            if drugie_słowo+' '+słowo in Y:
+              pass
+            else:
+              print(słowo+' '+drugie_słowo)
+              Y.add(słowo+' '+drugie_słowo)
+      else:
+        pass
+  
+
+
+pary('prusbolesław',)
+
+print()
+pary('patrykkumor')
+
+
+
