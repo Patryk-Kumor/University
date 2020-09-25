@@ -1,2 +1,2 @@
 # University
- Zestaw zadań i projektów wykonywanych w ramach zajęć i kursów w ramach Informatyki na UWr
+ Zestaw zadań, rozwiązań oraz projektów wykonanych w ramach zajęć i kursów, Informatyka UWr
