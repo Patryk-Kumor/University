@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<!--Nagłówek-->
+	<meta charset="UTF-8">
+	<title>Pusty dokument HTML</title>
+	<style>
+		div p:first-child { color: red; }
+		div p:last-child { color: green; }
+	</style>
+</head>
+
+<body>
+	<!--Kontent-->
+	<div>Ś
+		<!-- Jeśli dodamy poprzedzające dzieci niebędące p to nie otrzymają one koloru -->
+		<p> Jestem pierwszym dzieckiem elementu 'div'. (czerwony)</p>
+		<p> Jestem drugim dzieckiem elementu 'div'. (domyślny) </p>
+		<p> Jestem trzecim (ostatnim) dzieckiem elementu 'div'. (zielony)</p>
+		<!-- Jeśli dodamy dalsze dzieci niebędące p to nie otrzyma on koloru -->
+		<H1>To jest <em>ważny</em> nagłówek</H1>
+
+</div>
+</body>
+
+</html>

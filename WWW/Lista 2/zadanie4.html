@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<!--Nagłówek
+	http://blog.eduweb.pl/pseudo-elementy-before-i-after-w-css/
+	-->
+	<meta charset="UTF-8">
+	<title>Pusty dokument HTML</title>
+	<style>
+	div#bottom a[href^='http://']::after 
+	{
+		content: ' (dodajemy warunkowo skrawek napisu po) ';
+		color: red;
+	}
+	div#bottom a[href^='http://']::before 
+	{
+		content: ' (dodajemy warunkowo skrawek napisu przed) ';
+		color: red;
+	}
+	p::after 
+	{
+		content: ", duble hi";
+	}
+	h1::before
+	{
+		content: "this is ";
+		font-weight: bold;
+		font-style: italic;
+	}
+	</style>
+</head>
+
+<body>
+	<!--Kontent-->
+	<div id='bottom'>
+		<a href="http://wp.pl">wp.pl</a> <br>
+		<a href="index.html">home</a> <br>
+		<a href="http://yarpo.pl">yarpo.pl</a> <br>
+	</div> <br><br>
+	<p>
+		hi
+	</p>
+	<p>
+		not hi
+	</p> <br> <br>
+	
+	<h1>paragraph text</h1>
+</body>
+
+</html>

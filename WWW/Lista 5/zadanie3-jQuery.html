@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Zadanie 3</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="zadanie3.js"></script>
+	<style>
+	div.mainbox { border: 1px solid black; width: 520px; height: 520px;  }
+	.kolor{}
+	.absolut
+	{
+		position: absolute;  width: 300px;
+		top: 0px;  right: 0px; 
+		border: dotted 1px green;  color: black;  background-color: rgb(200,255,200);  padding: 25px;
+		text-align: center;
+		
+	}
+	.ustal
+	{
+		position: fixed; width: 260px;
+		top: 00%; right: 50%;
+		padding:15px; background-color: rgb(200,255,200);
+	}
+	.kwadrat 
+	{ 
+		float: left;
+		border: 1px dashed #ccc; 
+		height: 50px; 
+		width: 50px; 
+		background-color: white; 
+	}
+	.kwadratColor
+	{ 
+		float: left;
+		border: 1px dashed #ccc; 
+		height: 50px; 
+		width: 50px; 
+		
+	}
+	</style>
+		
+	<script>
+
+	</script>
+</head>
+
+<body>
+	<div class="absolut">
+	    <p> KOLOROWANKA!</p>
+		<div> <img style="height: 300px; width: 300px; " src="colors/OBRAZ.jpg"/> </div>
+	</div>
+	
+	<div class="ustal">
+		<div style="text-align: center;"> Paleta barw </div> <br>
+		
+		
+		<div class="kwadratColor" style="background-color: red; "  draggable="true" /> </div>
+		<div class="kwadratColor" style="background-color: blue; " draggable="true" /> </div>		
+		<div class="kwadratColor" style="background-color: yellow; "  draggable="true" /> </div>
+		<div class="kwadratColor" style="background-color: green; " draggable="true" /> </div>
+		
+		<div class="kwadratColor" style="background-color: white; "  draggable="true" /> </div>
+		<div class="kwadratColor" style="background-color: grey; " draggable="true" /> </div>		
+		<div class="kwadratColor" style="background-color: black; "  draggable="true" /> </div>
+		<div class="kwadratColor" style="background-color: brown; " draggable="true" /> </div>		
+
+		<div class="kwadratColor" style="background-color: pink; "  draggable="true" /> </div>
+		<div class="kwadratColor" style="background-color: aqua; " draggable="true" /> </div>	
+		
+		<!--
+		<div> <img class="kolor" id="red" src="colors/red.jpg" draggable="true" /> </div>
+		<div> <img id="blue" src="colors/blue.jpg"/> </div>
+		<div> <img id="green" src="colors/green.jpg"/> </div>
+		<div> <img id="yellow" src="colors/yellow.jpg"/> </div>
+		<div> <img id="black" src="colors/black.jpg"/> </div>
+		<div> <img id="gray" src="colors/gray.jpg"/> </div>
+		<div> <img id="white" src="colors/white.jpg"/> </div>
+		<div> <img id="brown" src="colors/brown.jpg"/> </div>
+		-->
+	</div>	
+	
+	<div class="mainbox" id="box">
+	</div>
+	<script>
+		for (var i=0; i<100; i++)
+		{
+			console.log("funkcja");
+			var kwadrat = document.createElement('div');
+			kwadrat.setAttribute('class', 'kwadrat')
+			
+			kwadrat.setAttribute('id', 'kwadrat')
+			
+			/*kwadrat.setAttribute('ondragover', 'allowDrop(event)')
+			kwadrat.setAttribute('ondrop', 'dropObrazki(event)')	*/	
+			document.getElementById('box').appendChild(kwadrat);
+		}
+	</script>
+
+</body>
+
+</html>

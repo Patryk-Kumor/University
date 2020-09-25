@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Zadanie 3</title>
+	<style>
+	div.mainbox { border: 1px solid black; width: 520px; height: 520px;  }
+	.absolut
+	{
+		position: absolute;  width: 300px;
+		top: 0px;  right: 0px; 
+		border: dotted 1px green;  color: black;  background-color: rgb(200,255,200);  padding: 25px;
+		text-align: center;
+		
+	}
+	.ustal
+	{
+		position: fixed; width: 300px;
+		top: 00%; right: 50%;
+		padding:15px; background-color: rgb(200,255,200);
+	}
+	.kwadrat 
+	{ 
+		float: left;
+		border: 1px dashed #ccc; 
+		height: 50px; 
+		width: 50px; 
+		background-color: white; 
+	}
+	</style>
+		
+	<script>
+	function allowDrop(e)
+	{
+		e.preventDefault();
+		return false;
+	}
+	function drag(e)
+	{
+		e.dataTransfer.setData("Text",e.target.id);
+	}
+	function dropObrazki(e)
+	{
+		e.target.style.backgroundColor = e.dataTransfer.getData("Text");
+	}
+	</script>
+</head>
+
+<body>
+	<div class="absolut">
+	    <p> KOLOROWANKA!</p>
+		<div> <img style="height: 300px; width: 300px; " src="colors/OBRAZ.jpg"/> </div>
+	</div>
+	
+	<div class="ustal">
+		<div style="text-align: center;"> Paleta barw </div>
+		<div> <img ondragstart="drag(event)" id="red" src="colors/red.jpg"/> </div>
+		<div> <img ondragstart="drag(event)" id="blue" src="colors/blue.jpg"/> </div>
+		<div> <img ondragstart="drag(event)" id="green" src="colors/green.jpg"/> </div>
+		<div> <img ondragstart="drag(event)" id="yellow" src="colors/yellow.jpg"/> </div>
+		<div> <img ondragstart="drag(event)" id="black" src="colors/black.jpg"/> </div>
+		<div> <img ondragstart="drag(event)" id="gray" src="colors/gray.jpg"/> </div>
+		<div> <img ondragstart="drag(event)" id="white" src="colors/white.jpg"/> </div>
+		<div> <img ondragstart="drag(event)" id="brown" src="colors/brown.jpg"/> </div>
+	</div>	
+	
+	<div class="mainbox" id="box">
+	</div>
+	<script>
+		for (var i=0; i<100; i++)
+		{
+			console.log("funkcja");
+			var kwadrat = document.createElement('div');
+			kwadrat.setAttribute('class', 'kwadrat')
+			kwadrat.setAttribute('ondragover', 'allowDrop(event)')
+			kwadrat.setAttribute('ondrop', 'dropObrazki(event)')		
+			document.getElementById('box').appendChild(kwadrat);
+		}
+	</script>
+
+</body>
+
+</html>

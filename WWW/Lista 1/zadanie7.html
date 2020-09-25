@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<!--Nagłówek-->
+	<meta charset="UTF-8">
+	<title>Pusty dokument HTML</title>
+</head>
+
+<body>
+	<!--Kontent-->
+	<div style="background-color:white">
+		<form id="Przelew" name="Przelew">
+		<label for="kwota">Kwota przelewu:</label> <br>
+		<input type="number" id="kwota" name="kwota" placeholder="Kwota przelewu"  required /> <br> <br>
+		
+		<label for="konto">Numer konta odbiorcy:</label> <br>
+		<input type="number" id="konto" name="konto" placeholder="Numer konta"  required /> <br> <br>
+				
+		<label for="name">Imię odbiorcy:</label> <br>
+		<input type="text" id="name" name="name" placeholder="Imię" pattern="[a-zA-Z]{1,}" required /> <br> <br>
+		
+		<label for="surname">Nazwisko odbiorcy:</label> <br>
+		<input type="text" id="surname" name="surname" placeholder="Nazwisko" pattern="[a-zA-Z]{1,}" required /> <br> <br>
+		
+		<label for="email">Email odbiorcy:</label> <br>
+		<input type="email" id="email" name="email" placeholder="Email" required /> <br> <br>
+		
+		<label for="tel">Telefon odbiorcy:</label> <br>
+		<input type="tel" id="tel" name="tel" placeholder="Telefon" pattern="[0-9]" required /> <br> <br>
+
+		<label for="adres"> Adres odbiorcy:</label> <br>
+		<input type="text" id="adres" name="adres" placeholder="Ulica i numer domu/mieszkania" required /> <br>		
+		<input type="text" id="miasto" name="miasto" placeholder="Miejscowość" required /> <br>		
+		<input type="text" id="kod" name="kod" placeholder="Kod pocztowy" required /> <br> <br>			
+		
+		<label for="date">Data:</label> <br>
+		<input type="date" id="date" name="date" min="2010-01-01" max="2020-12-31" required /> <br> <br>
+
+		<button type="submit" id="submit" name="submit" onclick="">Wyślij</button>
+		</form>
+	</div>
+</body>
+
+</html>

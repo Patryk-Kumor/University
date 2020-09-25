@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Zadanie 2</title>
+	
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+	
+<!--
+	<style>
+		label, input { display:block; }
+		input.text { margin-bottom:12px; width:95%; padding: .4em; }
+		fieldset { padding:0; border:0; margin-top:25px; }
+		h1 { font-size: 1.2em; margin: .6em 0; }
+		div#users-contain { width: 350px; margin: 20px 0; }
+		div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+		div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+		.ui-dialog .ui-state-error { padding: .3em; }
+		.validateTips { border: 1px solid transparent; padding: 0.3em; }
+	</style>
+-->
+    <script src="zadanie2.js"></script>
+</head>
+
+<body>
+
+	<div id="dialog-form" title="NOWY">
+	  <p class="validateTips">Wszystkie pola są wymagane.</p>
+	  <form>
+		<fieldset>
+		  <label for="name">Imię: </label> 
+		  <input type="text" name="name" id="name" value="Jan" class="text ui-widget-content ui-corner-all"> <br>
+		  <label for="surname">Nazwisko: </label>
+		  <input type="text" name="surname" id="surname" value="Kowalski" class="text ui-widget-content ui-corner-all"> <br>
+		  <label for="city">Miasto: </label>
+		  <input type="text" name="city" id="city" value="Warszawa" class="text ui-widget-content ui-corner-all"> <br>
+		  <label for="cityCode">Kod pocztowy: </label>
+		  <input type="text" name="cityCode" id="cityCode" value="xx-xxx" class="text ui-widget-content ui-corner-all"> <br>
+		  <label for="date">Data urodzenia: </label>
+		  <input type="text" name="date" id="date" value="dd-mm-rrrr" class="text ui-widget-content ui-corner-all"> <br>
+		  <!-- Allow form submission with keyboard without duplicating the dialog button -->
+		  <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+		</fieldset>
+	  </form>
+	</div>
+
+	<div id="users-contain" class="ui-widget">
+	  <h1>Dane:</h1>
+	  <table id="users" class="ui-widget ui-widget-content">
+		<thead>
+		  <tr class="ui-widget-header ">
+			<th>Imię</th>
+			<th>Nazwisko</th>
+			<th>Miasto</th>
+			<th>Kod pocztowy</th>
+			<th>Data urodzenia</th>
+			<th>Usuń</th>
+		  </tr>
+		</thead>
+		<tbody>
+		</tbody>
+	  </table>
+	</div>
+
+	<div id="dialog-remove" title="Usunąć?">
+		<p>Czy chcesz usunąć ten wpis?</p>
+	</div>
+
+	<br> <button id="create-user">DODAJ NOWY</button>
+	 
+ 
+</body>
+
+</html>

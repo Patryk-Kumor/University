@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<!--Nagłówek-->
+	<meta charset="UTF-8">
+	<title>Dokument HTML</title>
+	<style>
+		.textBlurredBG
+		{
+			display:inline-block;
+			position:relative;
+		}
+
+		.textBlurredBG img
+		{
+			transition:.3s;
+		}
+		  
+		.textBlurredBG:hover img
+		{
+			filter: blur(10px) brightness(100%);
+		}
+		.textBlurredBG :not(img)
+		{
+			position:absolute;
+			top:30%;
+			width:100%;
+			text-align:center;
+			color: black;
+			opacity:0;
+			transition:.9s;
+		}
+		.textBlurredBG:hover :not(img)
+		{
+			opacity:1;
+		}	
+	</style>
+</head>
+
+<body>
+	<!--Kontent-->
+	<div>
+		<div class="textBlurredBG">
+			<img src="obrazek1.jpg">
+			<h1>Tekst</h1>
+		</div>
+		<div class="textBlurredBG">
+			<img src="obrazek1.jpg">
+			<h1>Tekst</h1>
+		</div>
+		<div class="textBlurredBG">
+			<img src="obrazek1.jpg">
+			<h1>Tekst</h1>
+		</div>
+		<div class="textBlurredBG">
+			<img src="obrazek1.jpg">
+			<h1>Tekst</h1>
+		</div>
+	</div>
+	
+	<div>
+		<div class="textBlurredBG">
+			<img src="obrazek1.jpg">
+			<h1>Tekst</h1>
+		</div>
+		<div class="textBlurredBG">
+			<img src="obrazek1.jpg">
+			<h1>Tekst</h1>
+		</div>
+		<div class="textBlurredBG">
+			<img src="obrazek1.jpg">
+			<h1>Tekst</h1>
+		</div>
+		<div class="textBlurredBG">
+			<img src="obrazek1.jpg">
+			<h1>Tekst</h1>
+		</div>
+	</div>
+</body>
+
+</html>

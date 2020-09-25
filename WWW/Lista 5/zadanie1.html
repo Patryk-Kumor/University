@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Zadanie 1</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="zadanie1.js"></script>
+	<style>
+	#sliderContainer
+	{
+		width:500px;
+		height: 500px;
+		overflow: hidden;
+	}
+
+	#sliderContainer .slides
+	{
+		display: block;
+		width: 100000px;
+		height: 500px;
+		margin: 0;
+		padding: 0;
+	}
+
+	#sliderContainer .slide
+	{
+		float: left;
+		list-style-type: none;
+		width:500px;
+		height: 500px;
+	}
+	</style>	
+</head>
+
+<body>
+	<div id="slider-range-max" style="width: 500px"> </div>
+	<p><input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;"></p>
+		
+	<div id="sliderContainer">
+		<ul class="slides">
+			<li class="slide"> <img src="img/img1.jpg"> </li>
+			<li class="slide"> <img src="img/img2.jpg"> </li>
+			<li class="slide"> <img src="img/img3.jpg"> </li>
+			<li class="slide"> <img src="img/img4.jpg"> </li>
+			<li class="slide"> <img src="img/img5.jpg"> </li>
+			<li class="slide"> <img src="img/img1.jpg"> </li>
+			<li class="slide"> <img src="img/img2.jpg"> </li>
+			<li class="slide"> <img src="img/img3.jpg"> </li>
+			<li class="slide"> <img src="img/img4.jpg"> </li>
+			<li class="slide"> <img src="img/img5.jpg"> </li>
+			<li class="slide"> <img src="img/img1.jpg"> </li>
+		</ul>
+	</div>
+	
+	
+</body>
+
+</html>

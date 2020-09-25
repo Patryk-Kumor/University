@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<!--Nagłówek-->
+	<meta charset="UTF-8">
+	<title>Pusty dokument HTML</title>
+	<style>
+		h1 { font-family: sans-serif; }
+		h2 {color: red; }
+		em {color: red; }
+		h2 em {color: blue; }
+		body > p { color: green; }
+		div ol>li p { color: aqua }
+		li:first-of-type + li { color: red; }
+		.zielony { color : green; }
+		div.czerwony.krzywy { color : red; font-style: italic;}
+		div#post { text-align: center }
+	</style>
+</head>
+
+<body>
+	<!-- Type selectors - dopasuje się do każdego wystąpienia konkretnego elementu -->
+	<h1> Hello </h1> 
+	<h2 style="color:black"> Hello </h2>	 <br> <br>
+	<!-- Descendant selectors - dopasuje się do elementu, który jest potomkiem innego elementu -->	
+	<h2>To jest <em>bardzo</em> ważny tekst</h2>
+	<h1> A w tym nie zadziała, bo <em>h1</em> </h1>		<br> <br>
+	<!-- Child selectors - dopasuje się do elementu, który jest dzieckiem innego elementu-->
+	<p> Jakiś dziecięcy tekst </p>
+	<div> <ol> <li> <p> Tekst </p> </li></ol></div>		<br> <br>
+	<!-- Adjacent sibling selectors -->
+	<ul> <li>One</li> <li>Two!</li> <li>Three</li> </ul> 	<br> <br>
+	<!-- Class selectors -->
+	<div class="zielony"> coś zielonego </div>
+	<div class="czerwony krzywy"> coś czerwonego i krzywego </div>		<br> <br>
+	<!-- ID selectors - Każdy element HTML może mieć atrybut onazwie id-->
+	<div id="post"> Jakiś post </div>	<br> <br>
+</body>
+
+</html>

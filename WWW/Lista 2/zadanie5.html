@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<!--Nagłówek-->
+	<meta charset="UTF-8">
+	<title>Zadanie 5</title>
+	<style>
+		p:empty {width: 100px;
+				height: 20px;
+				background: #ff0000;}
+		p:first-of-type { color: red; }
+		p:last-of-type { color: blue; }	
+		div > h6:only-of-type { background: #ff0000;}
+		span > a:nth-child(4) { color: aqua;}
+		span > a:nth-last-child(2) { color: red;}
+		span > a:nth-of-type(2) { color: orange;}
+		span > a:nth-last-of-type(1) { color: green;}
+		article > h6:last-child {color: pink;}
+		*:root { background: #f2f2f2;}
+		span > p:not(:nth-child(1)) {color: grey;}
+		::-moz-selection 
+		{ /* Code for Firefox */
+			background: #ff0000;
+		}
+	</style>
+</head>
+
+<body>
+	<!--Kontent-->
+	<!-- first-of-type i Last-of-type (p) + empty -->
+	<p>Pierwsze p</p>
+	<p>Drugie p</p>
+	<p></p>
+	<p>Trzecie p</p>
+	<p>Ostatnie p</p> <br> <br>
+	<!-- only-of-type -->
+	<div>
+		<h5>H5</h5>
+		<h6>H6</h6>
+	</div> <br>
+	<div>
+		<h5>H5</h5>
+		<h6>H6</h6>
+		<h6>H6</h6>
+	</div> <br> <br>
+	<!-- nth - odliczają od 1 a nie 0 -->
+	<span>
+		<a> A1 </a> <p> P1 </p> <a> A2 </a> <a> A3 </a> <a> A4 </a> <a> A5 </a> <a> A6 </a> <a> A7 </a>  <a> A8 </a>  <a> A9 </a>  <a> A10 </a> 
+	</span> <br> <br>
+	<!-- last-child -->
+	<article>
+		<h6>H6 <span> text-span </span> <span> text-span2 </span> </h6>
+		<h5> H5 </h5>
+		<h6>H6</h6>
+	</article> <br> <br>
+	<!-- empty -->
+	<span> 
+		<p>p1</p> <p></p> <p>p3</p>
+	</span>
+	<!-- selection - Zaznaczenie tekstu w firefoxie powinno być czerwone, w reszcie:niebieskie-->
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<!--Nag³ówek-->
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style1.css"/>
+	<title>Pusty dokument HTML</title>	
+	<style type="text/css">
+		<!--
+		p {text-decoration: underline !important;}
+		-->
+		p { color: green; }
+		div { color: blue; }
+		h2 { color: red; }
+	</style>
+	<!--
+	https://pl.wikibooks.org/wiki/CSS/Dziedziczenie_i_kaskadowo%C5%9B%C4%87
+	-->
+</head>
+
+<body>
+	<!--Kontent-->
+	<p> Tekst1 </p>
+	<div> Tekst2 </div>
+	<h2> Tekst3 </h2> <br>
+	
+
+	<div> Tekst2 <p> Tekst1 </p> <h2> Tekst3 </h2> </div> <br>
+	<h2> Tekst3 </h2> <p> Tekst1 </p>	<div> Tekst2 </div> <br>
+	
+	<div style='color: yellow'> Tekst1 <div> Tekst2 </div> </div>  <br>
+	<div style='color: yellow !important'> Tekst1 <div> Tekst2 </div> </div>	 <br>
+	<div style='text-decoration: underline'> Tekst1 <div> Tekst2 </div> </div>	 <br>
+	<div style='text-decoration: underline !important'> Tekst1 <div> Tekst2 </div> </div>	 <br>
+</body>
+
+</html>

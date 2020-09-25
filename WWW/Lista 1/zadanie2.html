@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<!--Nag³ówek-->
+	<meta charset="UTF-8">
+	<title>Pusty dokument HTML</title>
+</head>
+
+<body>
+	<!--Kontent-->
+	<!-- 
+	http://ferrante.pl/books/html/chapter10.html 
+	
+	tag <span> nie spowoduje przejœcia tekstu do nowej linii,
+	bo jest elementem liniowym i przegl¹darka z automatu nadaje
+	mu styl display na inline:
+
+	1. DIV jest elementem blokowym, czyli jego (domyœlna)
+	szerokoœæ wynosi tyle ile szerokoœæ ca³ej linii 
+	2. span jest elementem œródliniowym, dlatego jego szerokoœæ wynosi tyle,
+	ile jest treœci w nim zawartej, w³aœnie dlatego elementy liniowe
+	nie mog¹ mieæ ustawianego text-align 
+	-->
+	<!--Znacznik <div> => element typu block-->
+	<div style="border: 1px solid black">to jest div</div>
+	<!--Znacznik <span> => element typu inline-->	
+	<span style="border: 1px solid red">to jest span</span> <br>  <br>
+	
+	<!--
+			Elementy zakomentowanie walidator uznaje za niepoprawne
+	-->
+	
+	<div>
+		<div> text-div </div>
+		<span> text-span </span>
+		<article> text-article </article>
+		<aside> text-aside </aside>
+		<header> text-hader </header>
+		<footer> text-footer </footer>
+		<address> text-address </address>
+		<section> text-section </section>
+		<nav> text-nav </nav>
+		<h1> text-h1 </h1>
+		<h2> text-h2 </h2>
+		<a>  text-a </a>
+	</div>
+	
+	<span>
+		<!--<div> text-div </div>-->
+		<span> text-span </span>
+		<!--<article> text-article </article>-->
+		<!--<aside> text-aside </aside>-->
+		<!--<header> text-hader </header>-->
+		<!--<footer> text-footer </footer>-->
+		<!--<address> text-address </address>-->
+		<!--<section> text-section </section>-->
+		<!--<nav> text-nav </nav>-->
+		<!--<h1> text-h1 </h1>-->
+		<!--<h2> text-h2 </h2>-->
+		<a>  text-a </a>
+	</span>	
+	
+	<article>
+		<div> text-div </div>
+		<span> text-span </span>
+		<article> text-article </article>
+		<aside> text-aside </aside>
+		<header> text-hader </header>
+		<footer> text-footer </footer>
+		<address> text-address </address>
+		<section> text-section </section>
+		<nav> text-nav </nav>
+		<h1> text-h1 </h1>
+		<h2> text-h2 </h2>
+		<a>  text-a </a>
+	</article>	
+	
+	<aside>
+		<div> text-div </div>
+		<span> text-span </span>
+		<article> text-article </article>
+		<aside> text-aside </aside>
+		<header> text-hader </header>
+		<footer> text-footer </footer>
+		<address> text-address </address>
+		<section> text-section </section>
+		<nav> text-nav </nav>
+		<h1> text-h1 </h1>
+		<h2> text-h2 </h2>
+		<a>  text-a </a>
+	</aside>	
+	
+	<header>
+		<div> text-div </div>
+		<span> text-span </span>
+		<article> text-article </article>
+		<aside> text-aside </aside>
+		<!--<header> text-hader </header>-->
+		<!--<footer> text-footer </footer>-->
+		<address> text-address </address>
+		<section> text-section </section>
+		<nav> text-nav </nav>
+		<h1> text-h1 </h1>
+		<h2> text-h2 </h2>
+		<a>  text-a </a>
+	</header>	
+	
+	<footer>
+		<div> text-div </div>
+		<span> text-span </span>
+		<article> text-article </article>
+		<aside> text-aside </aside>
+		<!--<header> text-hader </header>-->
+		<!--<footer> text-footer </footer>-->
+		<address> text-address </address>
+		<section> text-section </section>
+		<nav> text-nav </nav>
+		<h1> text-h1 </h1>
+		<h2> text-h2 </h2>
+		<a>  text-a </a>
+	</footer>
+	
+	<address>
+		<div> text-div </div>
+		<span> text-span </span>
+		<!--<article> text-article </article>-->
+		<aside> text-aside </aside>
+		<!--<header> text-hader </header>-->
+		<!--<footer> text-footer </footer>-->
+		<!--<address> text-address </address>-->
+		<!--<section> text-section </section>-->
+		<!--<nav> text-nav </nav>-->
+		<!--<h1> text-h1 </h1>-->
+		<!--<h2> text-h2 </h2>-->
+		<a>  text-a </a>
+	</address>	
+	
+	<section>
+		<div> text-div </div>
+		<span> text-span </span>
+		<article> text-article </article>
+		<aside> text-aside </aside>
+		<header> text-hader </header>
+		<footer> text-footer </footer>
+		<address> text-address </address>
+		<section> text-section </section>
+		<nav> text-nav </nav>
+		<h1> text-h1 </h1>
+		<h2> text-h2 </h2>
+		<a>  text-a </a>
+	</section>	
+	
+	<nav>
+		<div> text-div </div>
+		<span> text-span </span>
+		<article> text-article </article>
+		<aside> text-aside </aside>
+		<header> text-hader </header>
+		<footer> text-footer </footer>
+		<address> text-address </address>
+		<section> text-section </section>
+		<nav> text-nav </nav>
+		<h1> text-h1 </h1>
+		<h2> text-h2 </h2>
+		<a>  text-a </a>
+	</nav>	
+	
+	<h1>
+		<!--<div> text-div </div>-->
+		<span> text-span </span>
+		<!--<article> text-article </article>-->
+		<!--<aside> text-aside </aside>-->
+		<!--<header> text-hader </header>-->
+		<!--<footer> text-footer </footer>-->
+		<!--<address> text-address </address>-->
+		<!--<section> text-section </section>-->
+		<!--<nav> text-nav </nav>-->
+		<!--<h1> text-h1 </h1>-->
+		<!--<h2> text-h2 </h2>-->
+		<a>  text-a </a>
+	</h1>	
+	
+	<h2>
+		<!--<div> text-div </div>-->
+		<span> text-span </span>
+		<!--<article> text-article </article>-->
+		<!--<aside> text-aside </aside>-->
+		<!--<header> text-hader </header>-->
+		<!--<footer> text-footer </footer>-->
+		<!--<address> text-address </address>-->
+		<!--<section> text-section </section>-->
+		<!--<nav> text-nav </nav>-->
+		<!--<h1> text-h1 </h1>-->
+		<!--<h2> text-h2 </h2>-->
+		<a>  text-a </a>
+	</h2>
+	
+	<div>
+		<div> text-div </div>
+		<span> text-span </span>
+		<article> text-article </article>
+		<aside> text-aside </aside>
+		<header> text-hader </header>
+		<footer> text-footer </footer>
+		<address> text-address </address>
+		<section> text-section </section>
+		<nav> text-nav </nav>
+		<h1> text-h1 </h1>
+		<h2> text-h2 </h2>
+		<a>  text-a </a>
+	</div>	
+	
+	<a>
+		<div> text-div </div>
+		<span> text-span </span>
+		<article> text-article </article>
+		<aside> text-aside </aside>
+		<header> text-hader </header>
+		<footer> text-footer </footer>
+		<address> text-address </address>
+		<section> text-section </section>
+		<nav> text-nav </nav>
+		<h1> text-h1 </h1>
+		<h2> text-h2 </h2>
+		<!--<a>  text-a </a>-->
+	</a>	
+		
+</body>
+</html>

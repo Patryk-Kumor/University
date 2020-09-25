@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<!--Nagłówek-->
+	<meta charset="UTF-8">
+	<title>Zadanie 8 - A</title>
+	<style>
+	body
+	{
+		margin: 20px;
+		font-size: 20px;
+	}
+	.wrapper 
+	{
+		border: 1px solid black;
+		display: flex;
+		flex-flow: row wrap;
+	}
+	.wrapper > * 
+	{
+		border: 1px solid black;
+		flex: auto;
+	}
+	<!--RESZTA-->
+	.header { height: 100px; }
+	 
+	.logo { background-color: #99ccff; }
+	
+	.headerr { background-color: #9999ff; }
+
+	.footer { background-color: green; }
+
+	.main {text-align: left; flex-grow: 10;}
+	
+
+	.section {height: 500px; background-color: #ffffcc;}
+	
+	.menu { background-color: #ff9933;}
+	
+	.submenu { background-color: #cc33ff;}
+
+	.right { flex-grow: 10;}
+	
+	.left {flex-grow: 1;}
+
+	.aside{}
+
+	.content{}
+
+	</style>
+</head>
+
+<body>
+	<!--Kontent-->
+
+<div class="wrapper">
+    <header class="left header logo"> LOGO </header>
+    <header class="right header headerr"> HEADER </header>
+</div>
+
+<div class="wrapper">
+    <aside class="aside menu"> MENU </aside>
+</div>
+
+<div class="wrapper">
+    <aside class="left section aside submenu"> SUBMENU </aside>
+    <article class="right section content"> CONTENT </article>
+</div>
+
+<div class="wrapper">
+    <footer class="footer"> FOOTER </footer>
+</div>
+
+</body>
+
+</html>

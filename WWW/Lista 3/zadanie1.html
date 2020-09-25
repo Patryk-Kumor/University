@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<!--Nagłówek-->
+	<meta charset="UTF-8">
+	<title>Zadanie 1</title>
+	<style>
+	.box-of
+	{
+	  margin: 10px;
+	  border: 5px dashed navy;
+	  padding: 50px;
+	  width: 400px;
+	  height: 200px;
+	  background-color: lightsalmon;
+	}
+	.second-box
+	{
+	  width: 60px;
+	  height: 60px;
+	  background-color: lightsalmon;
+	}
+	</style>
+</head>
+
+<body>
+	<!--Kontent-->
+	<img src="https://the-awwwesomes.gitbooks.io/html-css-step-by-step/content/pl/images/box-model.png" alt="">
+	<br> <br>
+	<!--Boxy-->	
+	<div class="box-of">
+		To  jest środek pudełka div
+	</div>
+	<br> <br> <br> <br>
+	<span class="box-of">
+		To  jest środek pudełka span
+	</span>
+	<!-- 
+		Z zadania L1.2:
+		1. DIV jest elementem blokowym, czyli jego (domyślna)
+		szerokość wynosi tyle ile szerokość całej linii 
+		2. SPAN jest elementem śródliniowym, dlatego jego szerokość wynosi tyle,
+		ile jest treści w nim zawartej, właśnie dlatego elementy liniowe
+		nie mogą mieć ustawianego text-align.
+		Tag <span> nie spowoduje przejścia tekstu do nowej linii,
+		bo jest elementem liniowym i przeglądarka z automatu nadaje
+		mu styl display na inline:
+	-->
+	<br> <br> <br> <br> <br> <br> <br> <br>
+	<div class="second-box">
+		To  jest środek pudełka div
+	</div>
+	<br> <br> <br> <br>
+	<span class="second-box">
+		To  jest środek pudełka span
+	</span>
+	
+</body>
+
+</html>

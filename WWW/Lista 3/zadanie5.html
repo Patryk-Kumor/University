@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<!--Nagłówek-->
+	<meta charset="UTF-8">
+	<title>Zadanie 5</title>
+	<style>
+	ul#klasa1
+	{
+		list-style-image: url(kropka.png);
+	}
+	ul#klasa2
+	{
+		list-style-type: none;
+	}
+	ul#klasa2 li:before
+	{
+		content: url(kropka.png);
+	}
+	</style>
+</head>
+
+<body>
+	<!--BASIC CSS-->
+	<ul id="klasa1">
+		<li> Jeden </li>
+		<li> Dwa </li>
+	    <li> Trzy </li>
+	</ul>
+	
+	<!--BEFORE-->
+	<ul id="klasa2">
+		<li> Jeden </li>
+		<li> Dwa </li>
+	    <li> Trzy </li>
+	</ul>
+</body>
+
+</html>

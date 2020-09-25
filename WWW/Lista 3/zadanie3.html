@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<!--Nagłówek-->
+	<meta charset="UTF-8">
+	<title>Zadanie 3</title>
+	<style>
+		.static
+		{
+			position:static; width: 300px;
+            padding:15px; background-color:aqua;
+		}
+		.relativ
+		{
+		    position:relative; width: 300px;
+			left: 100px; bottom:25px;
+            padding:15px; background-color:red;
+		}
+		.absolut
+		{
+			position: absolute;  width: 300px;
+			top: 0px;  right: 0px;  
+			border: dotted 1px green;  color: black;  background-color: rgb(200,255,200);  padding: 4px;
+		}
+		.ustal
+		{
+		    position: fixed; width: 300px;
+		    top: 50%; left: 50%;
+			padding:15px; background-color: green;
+		 }
+	</style>
+</head>
+
+<body>
+	<!-- http://www.kurshtml.edu.pl/css -->
+	
+	
+	<!-- Statyczne -->
+	<div class="static">
+		Pozycjonowanie statyczne
+	</div>
+	<div class="static">
+		Przywraca normalne pozycjonowanie elementu. Jest to przydatne np. w celu usunięcia ogólnej deklaracji pozycjonowania, umieszczonej w arkuszu stylów. Wystarczy wtedy, dla wybranych elementów strony, umieścić powyższe polecenie w stylu inline. Spowoduje to usunięcie pozycjonowania dla tych elementów, a jednocześnie utrzymanie dla innych (tego samego typu) ................................................................
+	</div>
+	
+	<!-- Relatywne - left,top,right,bottom -->
+	<div class="relativ">
+		Pozycjonowanie relatywne
+	</div>
+	<div class="relativ">
+		Polecenie pozycjonowania relatywnego (względnego) pozwala przesunąć wybrany element w dowolną stronę względem jego położenia spoczynkowego, czyli pozycji gdy nie używamy żadnego pozycjonowania.
+	</div>
+	
+	<!-- Absolutne -->
+	<div class="absolut">
+		Pozycjonowanie absolutne
+	</div>
+	<div class="absolut">
+		Polecenie pozycjonowania absolutnego (bezwzględnego) pozwala przesunąć wybrany element w dowolną stronę względem wybranych brzegów strony lub ewentualnie ramki albo "obejmującego bloku". Dzięki temu dany element będzie umieszczony tam na "sztywno", bez względu na miejsce, w którym wpisaliśmy polecenie pozycjonowania absolutnego. Jeżeli jako "wartość" wpiszemy liczbę ujemną, element znajdzie się częściowo lub całkowicie poza obrębem strony lub wyjdzie poza krawędzie "obejmującego bloku".
+	</div>	
+		
+	<!-- Ustalone -->
+	<div class="ustal">
+		Pozycjonowanie ustalone
+	</div>
+	<div class="ustal">
+		Polecenie to działa podobnie jak pozycjonowanie absolutne, z tą różnicą, że pozycja elementu jest zawsze obliczana względem krawędzi okna przeglądarki (obszaru w którym znajduje się strona). Dodatkowo element taki jest nieruchomy podczas przewijania strony, przez co jest on przez cały czas widoczny na ekranie, dokładnie w tym samym miejscu. Daje to zbliżony efekt, jak nieruchome pojedyncze tło.
+	</div>
+	
+</body>
+
+</html>
