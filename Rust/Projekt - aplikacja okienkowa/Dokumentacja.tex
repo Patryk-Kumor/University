@@ -1,0 +1,46 @@
+%% https://www.papeeria.com/p/09d9be06-953b-4909-ae48-939207039837#/main.tex
+%% http://www.latex-kurs.x25.pl/paper/latex_wielojezyczny
+\documentclass[11pt]{article}
+
+\usepackage{hyperref}
+
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\selectlanguage{polish}
+
+\title{Opis projektu - ksi\k{a}\.zka adresowa}
+\author{Patryk Kumor, Kurs programowania w j\k{e}zyku Rust}
+\date{20/02/2020}
+
+\begin{document}
+\maketitle
+
+\section{Opis projektu}
+Tematem projektu b\k{e}dzie aplikacja okienkowa - ksi\k{a}\.zka adresowa.
+Okno g\l{}\'owne aplikacji zawiera\'c b\k{e}dzie list\k{e} kontakt\'ow, kt\'ore b\k{e}dzie mo\.zna
+wy\'swietli\'c lub edytowa\'c. Umo\.zliwiona zostanie tak\.ze opcja dodania nowej pozycji w\,\,ksi\k{a}\.zce adresowej. 
+\newline
+Z dodatkowych mo\.zliwo\'sci: udost\k{e}pnione okienko z zegarem i kalendarzem.
+\newline
+Do rozwa\.zenia: ksi\k{a}\.zeczka zaplanowanych spotka\'n i wydarze\'n.
+
+
+\section{U\.zywane crate'y i zale\.zno\'sci}
+Aplikacja korzysta\'c b\k{e}dzie z:
+\begin{itemize}
+    \item
+    native-windows-gui - biblioteka zestawu narz\k{e}dzi do tworzenia GUI oparty na Microsoft Windows WINAPI. \newline
+    \url{ https://github.com/gabdube/native-windows-gui }
+    \item
+    rustbreak - biblioteka do obs\l{}ugi plikowych baz danych w notacji RON - Rusty Object Notation. \newline
+    \url{ https://github.com/TheNeikos/rustbreak }
+    \item 
+    pozosta\l{}e: serde, serde\_derive, failure - biblioteki wymagane przez powy\.zsze crate'y 
+\end{itemize}
+
+\section{Szczeg\'o\l{}y implementacji}
+Z uwagi na u\.zycie WINAPI aplikacja przeznaczona b\k{e}dzie tylko dla system\'ow Widnows.
+
+\end{document}

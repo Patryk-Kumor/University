@@ -1,0 +1,19 @@
+[package]
+name = "window-app"
+version = "0.1.0"
+authors = ["Patryk"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.10"
+regex = "1"
+native-windows-gui = "0.2.1"
+serde_derive = "1.0.104"
+failure = "0.1.6"
+serde = { version = "1.0", features = ["derive"] }
+
+[dependencies.rustbreak]
+version = "2.0.0-rc3"
+features = ["ron_enc"]
